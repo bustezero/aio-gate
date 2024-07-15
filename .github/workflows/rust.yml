@@ -159,7 +159,7 @@ jobs:
       name: Upload binaries to release
       if: ${{ github.event_name == 'push' }}
       with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         file: aio_gateway-${{ matrix.TARGET }}${{ matrix.EXTENSION }}
         asset_name: aio_gateway-${{ matrix.TARGET }}${{ matrix.EXTENSION }}
         tag: ${{ github.ref }}
