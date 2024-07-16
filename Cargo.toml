@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["buste <buste@buste.cn>"]
 edition = "2021"
 include = ["LICENSE-APACHE", "LICENSE-MIT", "**/*.rs", "Cargo.toml"]
-rust-version = "1.76"
+rust-version = "1.79"
 
 [package.metadata.docs.rs]
 all-features = true
@@ -18,10 +18,15 @@ eframe = { version = "0.28", default-features = false, features = [
     "glow",          # Use the glow rendering backend. Alternative: "wgpu".
     "persistence",   # Enable restoring app state when restarting the app.
 ] }
-log = "0.4"
+log = "0.4.22"
+sevenz-rust = "0.6.1"
+rfd = "0.14.1"
+tempfile = "3.10.1"
 
 # You only need serde if you want app persistence:
 serde = { version = "1", features = ["derive"] }
+tempdir = "0.3.7"
+image = "0.25.1"
 
 # native:
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
